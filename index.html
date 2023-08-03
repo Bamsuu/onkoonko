@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assest/style.css">
+    <style>
+        /* Add some basic styling to the checkboxes */
+        body {
+          font-family: Arial, sans-serif;
+        }
+        input[type="checkbox"] {
+          margin: 5px;
+        }
+      </style>
+    </head>
+    <body>
+    <div id="text">
+      <h1>Onko se nainen vai mies?</h1>
+      <br>
+      <h3>Valitse 2 tai 3.</h3>
+    </div>
+    <div id="boxit">
+      <!-- Checkboxes -->
+      <label for="c1">
+        <input class="chekki"  type="checkbox" name="valinta" value="hiukset" id="c1" /> pitkät hiukset
+      </label>
+      <label for="c2">
+        <input class="chekki" type="checkbox" name="valinta" value="hiukset2" id="c2" /> lyhyet hiukset
+      </label>
+      <label for="c3">
+        <input class="chekki" type="checkbox" name="valinta" value="kulli" id="c3" /> onko kulli
+      </label>
+      <label for="c4">
+        <input class="chekki" type="checkbox" name="valinta" value="pillu" id="c4" /> onko pillu
+      </label>
+      <label for="c5">
+        <input class="chekki" type="checkbox" name="valinta" value="sanooMies" id="c5" /> sanoo olevansa mies
+      </label>
+      <label for="c6">
+        <input class="chekki" type="checkbox" name="valinta" value="sanooNainen" id="c6" /> sanoo olevansa nainen
+      </label>
+      <br>
+      <button id="nappi">submit</button>
+      
+    </div>
+    </body>
+    <script src="assest/script.js"></script>
+</html>
