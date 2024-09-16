@@ -1,18 +1,23 @@
 label {
-    border-width: 5px 5px 5px 5px;
-    border: black;
-    margin: 0.5rem;
-    
+  border-width: 5px 5px 5px 5px;
+  border: black;
+  margin: 0.5rem;
 }
 
 button {
-    margin: 1rem;
+  margin: 1rem;
 }
 
 #text {
-    text-align: center;
+  text-align: center;
 }
 
 #boxit {
-    text-align: center;
+  text-align: center;
+}
+
+#vastaus {
+  text-align: center;
+  margin: 2rem;
+  border-bottom: black 4px solid;
 }

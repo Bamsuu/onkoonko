@@ -1,50 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="assest/styles.css">
+    <link rel="stylesheet" href="assest/styles.css" />
     <style>
-        /* Add some basic styling to the checkboxes */
-        body {
-          font-family: Arial, sans-serif;
-        }
-        input[type="checkbox"] {
-          margin: 5px;
-        }
-      </style>
-    </head>
-    <body>
+      /* Add some basic styling to the checkboxes */
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      input[type="checkbox"] {
+        margin: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
     <div id="text">
       <h1>Onko se nainen vai mies?</h1>
-      <br>
+      <br />
       <h3>Valitse 2 tai 3.</h3>
     </div>
     <div id="boxit">
       <!-- Checkboxes -->
       <label for="c1">
-        <input class="chekki"  type="checkbox" name="valinta" value="hiukset" id="c1" /> pitkät hiukset
+        <input
+          class="chekki"
+          type="checkbox"
+          name="valinta"
+          value="hiukset"
+          id="c1" />
+        pitkät hiukset
+      </label>
+      <label for="c7">
+        <input
+          class="chekki"
+          type="checkbox"
+          name="valinta"
+          value="viikset"
+          id="c7" />
+        Viikset?
+      </label>
+      <label for="c8">
+        <input
+          class="chekki"
+          type="checkbox"
+          name="valinta"
+          value="viikset"
+          id="c8" />
+        parta?
       </label>
       <label for="c2">
-        <input class="chekki" type="checkbox" name="valinta" value="hiukset2" id="c2" /> lyhyet hiukset
+        <input
+          class="chekki"
+          type="checkbox"
+          name="valinta"
+          value="hiukset2"
+          id="c2" />
+        lyhyet hiukset
       </label>
       <label for="c3">
-        <input class="chekki" type="checkbox" name="valinta" value="kulli" id="c3" /> onko kulli
+        <input
+          class="chekki"
+          type="checkbox"
+          name="valinta"
+          value="kulli"
+          id="c3" />
+        onko kulli?
       </label>
       <label for="c4">
-        <input class="chekki" type="checkbox" name="valinta" value="pillu" id="c4" /> onko pillu
+        <input
+          class="chekki"
+          type="checkbox"
+          name="valinta"
+          value="pillu"
+          id="c4" />
+        onko pillu?
       </label>
       <label for="c5">
-        <input class="chekki" type="checkbox" name="valinta" value="sanooMies" id="c5" /> sanoo olevansa mies
+        <input
+          class="chekki"
+          type="checkbox"
+          name="valinta"
+          value="sanooMies"
+          id="c5" />
+        sanoo olevansa mies
       </label>
+      <br />
       <label for="c6">
-        <input class="chekki" type="checkbox" name="valinta" value="sanooNainen" id="c6" /> sanoo olevansa nainen
+        <input
+          class="chekki"
+          type="checkbox"
+          name="valinta"
+          value="sanooNainen"
+          id="c6" />
+        sanoo olevansa nainen
       </label>
-      <br>
+      <label for="c9">
+        <input
+          class="chekki"
+          type="checkbox"
+          name="valinta"
+          value="viikset"
+          id="c9" />
+        käyttää meikkiä?
+      </label>
+      <label for="c10">
+        <input
+          class="chekki"
+          type="checkbox"
+          name="valinta"
+          value="viikset"
+          id="c10" />
+        kissankorvat ja häntä?
+      </label>
+      <label for="c11">
+        <input
+          class="chekki"
+          type="checkbox"
+          name="valinta"
+          value="viikset"
+          id="c11" />
+        Käyttää hametta
+      </label>
+      <label for="c12">
+        <input
+          class="chekki"
+          type="checkbox"
+          name="valinta"
+          value="viikset"
+          id="c12" />
+        tissit?
+      </label>
+      <br />
       <button id="nappi">submit</button>
-      
+      <button id="nappi2">reset</button>
     </div>
-    </body>
-    <script src="assest/script.js"></script>
+    <div id="vastaus">
+      <h3>
+        <p id="result"></p>
+      </h3>
+    </div>
+  </body>
+  <script src="assest/script.js"></script>
 </html>

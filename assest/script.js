@@ -1,55 +1,79 @@
-const valyks = document.getElementById('c1');
-const valkaks = document.getElementById('c2');
-const valkolm = document.getElementById('c3');
-const valnelj = document.getElementById('c4');
-const valviis = document.getElementById('c5');
-const valkuus = document.getElementById('c6');
-const nap = document.getElementById('nappi');
-const nap2 = document.getElementById('nappi2');
+const val1 = document.getElementById("c1");
+const val2 = document.getElementById("c2");
+const val3 = document.getElementById("c3");
+const val4 = document.getElementById("c4");
+const val5 = document.getElementById("c5");
+const val6 = document.getElementById("c6");
+const val7 = document.getElementById("c7");
+const val8 = document.getElementById("c8");
+const val9 = document.getElementById("c9");
+const val10 = document.getElementById("c10");
+const val11 = document.getElementById("c11");
+const val12 = document.getElementById("c12");
+const nap = document.getElementById("nappi");
+const nap2 = document.getElementById("nappi2");
 let tulos = 0;
-let done = false;
-
 
 function hiukset1() {
-  if (valyks.checked) {
-  tulos = tulos - 1;
-} else {
-  tulos = tulos + 1;
-}
-return tulos;
-}
-
-function hiukset2 () {
- if (valkaks.checked) {
-  tulos = tulos + 1;
- } else {
-  tulos = tulos - 1;
- }
-
- return tulos;
-}
-
-function kulli() {
- if (valkolm.checked) {
-  tulos = tulos + 1;
- } else {
-  tulos = tulos - 1 
- }
-return tulos;
-}
-
-function pillu() {
-  if (valnelj.checked) {
+  if (val1.checked) {
     tulos = tulos - 1;
   } else {
     tulos = tulos + 1;
   }
-return tulos;
+  return tulos;
+}
+
+function hiukset2() {
+  if (val2.checked) {
+    tulos = tulos + 1;
+  } else {
+    tulos = tulos - 1;
+  }
+
+  return tulos;
+}
+
+function viikset() {
+  if (val7.checked) {
+    tulos = tulos + 3;
+  } else {
+    tulos = tulos - 3;
+  }
+
+  return tulos;
+}
+
+function parta() {
+  if (val8.checked) {
+    tulos = tulos + 3;
+  } else {
+    tulos = tulos - 3;
+  }
+
+  return tulos;
+}
+
+function kulli() {
+  if (val3.checked) {
+    tulos = tulos + 1;
+  } else {
+    tulos = tulos - 1;
+  }
+  return tulos;
+}
+
+function pillu() {
+  if (val4.checked) {
+    tulos = tulos - 1;
+  } else {
+    tulos = tulos + 1;
+  }
+  return tulos;
 }
 
 function onkomies() {
-  if (valviis.checked) {
-    tulos = tulos + 1;  
+  if (val5.checked) {
+    tulos = tulos + 1;
   } else {
     tulos = tulos - 1;
   }
@@ -57,46 +81,80 @@ function onkomies() {
 }
 
 function onkonainen() {
-  if (valkuus.checked) {
+  if (val6.checked) {
     tulos = tulos - 1;
   } else {
     tulos = tulos + 1;
-   }
-   return tulos;
+  }
+  return tulos;
 }
 
-var fun1 = (function () {
-  return function () {
-      if (tulos < 0 && !done) {
-          done = true;
-         // tulos = 0;
-          alert("SE ON NAINEN!");
-          location.reload();
-          
-      
-      } else if(tulos === 0){
-        alert("SE ON BATMAN! Valitse vielä yksi")
-        location.reload();
-      }
-      
-      else { 
-        alert("SE ON MIES!");
-        location.reload(); 
-        //tulos = 0;
-    }
-  };
-})();
+function meikkiä() {
+  if (val9.checked) {
+    tulos = tulos - 1;
+  } else {
+    tulos = tulos + 1;
+  }
+  return tulos;
+}
 
+function hame() {
+  if (val11.checked) {
+    tulos = tulos - 1;
+  } else {
+    tulos = tulos + 1;
+  }
+  return tulos;
+}
 
+function tissit() {
+  if (val12.checked) {
+    tulos = tulos - 1;
+  } else {
+    tulos = tulos + 1;
+  }
+  return tulos;
+}
 
+function fun1() {
+  if (val10.checked) {
+    tulos = 0;
+  }
 
+  let resulttext = "";
 
+  if (tulos < 0) {
+    resulttext = "Vastauksesi!: SE ON NAINEN!";
+  } else if (tulos === 0) {
+    resulttext = "Vastauksesi!: Bait? pantava? anna mennä!";
+  } else {
+    resulttext = "vastauksesi!: SE ON MIES!";
+  }
 
-valyks.addEventListener('click', hiukset1,);
-valkaks.addEventListener('click', hiukset2);
-valkolm.addEventListener('click', kulli);
-valnelj.addEventListener('click', pillu);
-valviis.addEventListener('click', onkomies);
-valkuus.addEventListener('click', onkonainen);
-nap.addEventListener('click', fun1);
+  document.getElementById("result").textContent = resulttext;
+}
 
+function fun2() {
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  checkboxes.forEach((checkbox) => {
+    checkbox.checked = false;
+
+    document.getElementById("result").textContent = "";
+  });
+
+  tulos = 0;
+}
+
+val1.addEventListener("click", hiukset1);
+val2.addEventListener("click", hiukset2);
+val3.addEventListener("click", kulli);
+val4.addEventListener("click", pillu);
+val5.addEventListener("click", onkomies);
+val6.addEventListener("click", onkonainen);
+val7.addEventListener("click", viikset);
+val8.addEventListener("click", parta);
+val9.addEventListener("click", meikkiä);
+val11.addEventListener("click", hame);
+val12.addEventListener("click", tissit);
+nap.addEventListener("click", fun1);
+nap2.addEventListener("click", fun2);
